@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Baumans&family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #3d087b;
+}
+
+.container {
+  padding-inline: 10rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card {
+  width: 46%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 1rem;
+}
+
+.resp{
+  display: flex;
+}
+
+.clock-cont{
+  display: none;
+}
+
+.msg-box-resp{
+  display: none;
+  margin-top: 1rem;
+}
+
+.img-resp{
+  display: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.time-card {
+  width: 100%;
+  height: 24rem;
+  background: white;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-inline: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text-drop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 33%;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-family: "Manrope", sans-serif;
+  color: #3d087b;
+  margin-left: 0.8rem;
+}
+
+.drop-down {
+  width: 60%;
+  height: 4rem;
+  border-radius: 4px;
+  border: 1px solid #ededed;
+  padding: 10px;
+  font-family: "Manrope" sans-serif;
+  font-weight: normal;
+  font-size: 1.3rem;
+  color: #3d087bde;
+}
+
+.drop-text {
+  font-family: "Manrope" sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: #3d087bde;
+}
+
+.forwakeUpValue {
+  font-family: "Lugrasimo" sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: #3d087bde;
+}
+
+.napTimeValue{
+  font-family: "Manrope" sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: #3d087bde;
+}
+
+.forlunchValue{
+  font-family: "Manrope" sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: #3d087bde;
+}
+
+.nightTimeValue{
+  font-family: "Manrope" sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: #3d087bde;
+}
+
+.massege {
+  margin-top: 1rem;
+  padding: 1.7rem;
+  width: 100%;
+  height: 7rem;
+  border-radius: 10px;
+  background-color: #6a419a;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.text-massege {
+  font-family: "Baumans", sans-serif;
+  font-size: 2.8rem;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.row {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+.party-button {
+  width: 44%;
+  height: 5.4rem;
+  background: transparent
+    linear-gradient(113deg, #6e54ec 0%, #cb52f8 40%, #fc5eff 81%, #f1a7c5 100%)
+    0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  /* font: normal normal 600 24px/38px Manrope; */
+  font-size: 3rem;
+  font-family: "Manrope" sans-serif;
+  font-weight: 600;
+  color: white;
+  border: none;
+}
+
+.party-button:hover {
+  background: linear-gradient(
+    280deg,
+    #6e54ec 0%,
+    #cb52f8 40%,
+    #fc5eff 81%,
+    #f1a7c5 100%
+  );
+}
+
+.timing {
+  width: 50%;
+  height: 10rem;
+  background-color: #6a419a;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "Manrope" sans-serif;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  color: #f25cfe;
+}
+
+.clock-container {
+  width: 100%;
+  height: 13rem;
+  position: relative;
+}
+
+.lower-container {
+  position: absolute;
+  z-index: 1;
+  left: 15%;
+  right: 15%;
+  width: 70%;
+  bottom: 0%;
+  height: 5rem;
+  border-radius: 10px;
+  opacity: 0.22;
+  background-color: white;
+}
+.middle-container {
+  position: absolute;
+  z-index: 2;
+  left: 7%;
+  right: 7%;
+  width: 86%;
+  bottom: 11%;
+  height: 5rem;
+  border-radius: 10px;
+  opacity: 0.71;
+  background-color: white;
+}
+
+.top-container {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 0%;
+  height: 11rem;
+  border-radius: 10px;
+  opacity: 1;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+
+.box {
+  height: 100%;
+  width: 10rem;
+  background: #f6e2ff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem;
+}
+.background {
+  background: transparent
+    linear-gradient(113deg, #6e54ec 0%, #cb52f8 40%, #fc5eff 81%, #f1a7c5 100%);
+}
+
+.boxy {
+  height: 100%;
+  width: 9rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-hour {
+  font-family: "Barlow", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 3rem;
+  color: #8a11bf;
+}
+
+.timer-subtitle {
+  font-family: "Barlow", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 3rem;
+  color: #5f0089;
+}
+
+/* font: normal normal 600 20px/32px Manrope; */
+
+.timer-lable {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.6rem;
+  color: #3d087b;
+}
+
+/* font: normal normal normal 36px/43px Barlow; */
+
+.timer-value {
+  font-family: "Manrope", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2.8rem;
+  color: white;
+}
+
+.msg-box {
+  width: 100%;
+  height: 9rem;
+  border-radius: 10px;
+  background-color: white;
+  margin-block: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.msg-box-r {
+  width: 100%;
+  height: 9rem;
+  border-radius: 10px;
+  background-color: white;
+  margin-block: 1.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+/* font: normal normal 900 30px/40px Bauhaus Hv BT; */
+
+.msg-box-title {
+  font-family: "Baumans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2.4rem;
+  color: #8e53f0;
+}
+
+.img-box {
+  height: 26rem;
+  width: 100%;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-box-r {
+  height: 26rem;
+  width: 100%;
+  border-radius: 10px;
+  background: white;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  height: 100%;
+  width: 70%;
+  border: 1px solid white;
+  background-image: url(./images/Component.svg);
+  background-size: cover;
+}
+
+/* @media screen and(min-width:760px) {
+ 
+} */
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 47.5%;
+  }
+  .drop-down {
+    width: 60%;
+    height: 4.4rem;
+    border-radius: 4px;
+    border: 1px solid #ededed;
+    padding: 10px;
+    font-family: "Manrope" sans-serif;
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: #3d087bde;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .clock-cont{
+    display: block;
+  }
+
+  .msg-box-r{
+    display: flex;
+ 
+  }
+
+  .img-box-r{
+    display: flex;
+    margin-top: 5rem;
+  }
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150vh;
+  }
+
+  html {
+    font-size: 52.5%;
+  }
+
+  * {
+    overflow-y: unset;
+  }
+
+  .resp{
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  
+  }
+  
+  .time-card{
+    height: 34vh;
+  }
+  .logo{
+    height: 18rem;
+  }
+  
+  .timing{
+    height: 10.0rem;
+  }
+  
+  .timer-hour {
+    font-size: 2.3rem;
+  }
+
+  .timer-subtitle {
+    font-size: 2.7rem;
+  }
+
+}
+
+@media screen and (max-width:425px) {
+  .container{
+    height: 165vh;
+  }
+  
+  html{
+    font-size: 48%;
+  }
+  .logo{
+    height: 14rem;
+  }
+  .time-card{
+    height: 36vh;
+  }
+
+}
+
+@media screen and (max-width: 552px) {
+  .container {
+    padding-inline: 2rem;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html{
+    font-size: 48%;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  html{
+    font-size: 48%;
+  }
+
+  .text-massege{
+    font-size: 2.0rem;
+  }
+  
+  .top-container{
+    height: 9rem;
+  }
+  .box{
+    width: 7rem;
+  }
+  .boxy{
+    width: 6rem;
+  }
+  .msg-box-title{
+    font-size: 2.2rem;
+  }
+  .img{
+    width: 100%;
+  }
+
+ 
+}
